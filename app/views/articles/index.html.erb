@@ -1,0 +1,13 @@
+<h1>Hello, Rails!</h1> 
+<%= form_tag(articles_path, method: :get) do %>
+  <%= text_field_tag :title, params[:title] %>
+  <%= submit_tag 'Search' %>
+<% end %>
+<ul>
+  <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+  <% end %>
+</ul>
+<%= link_to 'New artile', new_article_path %>

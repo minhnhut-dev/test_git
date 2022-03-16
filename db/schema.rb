@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_03_14_084059) do
 
-  create_table "articles", charset: "latin1", force: :cascade do |t|
+  create_table "articles", charset: "utf8mb3", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_03_14_084059) do
     t.string "description"
   end
 
-  create_table "comments", charset: "latin1", force: :cascade do |t|
+  create_table "comments", charset: "utf8mb3", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
     t.bigint "article_id", null: false

@@ -10,7 +10,6 @@ default: &default
   username: root
   password: minhnhut123
   encoding: utf8
-  collation: utf8_general_ci
 
 development:
   <<: *default
@@ -25,4 +24,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  # database: db/production.sqlite3
+  database: blog
+
